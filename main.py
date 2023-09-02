@@ -93,6 +93,7 @@ def combinePDFs():
 window = tk.Tk()
 
 # Window Design
+window.iconbitmap("PDF_file_icon.ico")
 window.title("Combine PDF App")
 window.geometry("500x450")
 
