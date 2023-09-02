@@ -19,9 +19,9 @@ A Python applet that combines multiple PDF files into one PDF file.
 
 5. Run the command: **```pip install -r requirements.txt```**
 
-6. Run main.py
+6. Run main.py file.
 
-7. Use the tkinter GUI to process your files. The last file chosen will be located first in the combined product.
+7. Use the tkinter GUI to process your files. The last pdf file chosen will be located first in the combined product. Check for a merged.pdf file in the folder of the cloned repo.
 
 
 
