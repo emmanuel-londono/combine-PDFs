@@ -1,3 +1,14 @@
+import sys
+
+if getattr(sys, "frozen", False):
+    import pyi_splash
+
+
+def resource(relative_path):
+    base_path = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
+
+
 import tkinter as tk
 from tkinter import filedialog, ttk, messagebox, font
 import os
@@ -93,7 +104,6 @@ def combinePDFs():
 window = tk.Tk()
 
 # Window Design
-window.iconbitmap("PDF_file_icon.ico")
 window.title("Combine PDF App")
 window.geometry("1250x750")
 
@@ -140,6 +150,10 @@ output_label = ttk.Label(
     font="Calibri 12 bold",
 )
 output_label.pack(pady=5)
+
+
+if getattr(sys, "frozen", False):
+    pyi_splash.close()
 
 # Run
 window.mainloop()
