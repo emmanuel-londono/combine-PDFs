@@ -17,7 +17,7 @@ A Python applet that combines multiple PDF files into one PDF file.
 
 4. Open the terminal in the IDE.
 
-5. pip install -r requirements.txt
+5. Run the command: ```**pip install -r requirements.txt```**
 
 6. Run main.py
 
