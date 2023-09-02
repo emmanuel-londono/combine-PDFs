@@ -1,6 +1,9 @@
 # Combine-PDFs-App
 A Python applet that combines multiple PDF files into one PDF file. 
 
+
+![Image](PDF_file_icon.png)
+
 ## Installation
 
 
