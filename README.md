@@ -2,7 +2,7 @@
 A Python applet that combines multiple PDF files into one PDF file. 
 
 
-![Image](combine_pdf_icon.png)
+![Image](combineAll.jpeg)
 
 ## Installation
 
