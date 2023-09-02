@@ -7,7 +7,7 @@ A Python applet that combines multiple PDF files into one PDF file.
 ## Installation
 
 
-<sub> This installation guide assumes the user has a python environment set up and running. </sub>
+<sub> This installation guide assumes the user has git downloaded and a python environment set up and running. </sub>
 
 1. Clone this repository into your local machine with:       **```git clone git@github.com:emmanuel-londono/combine-PDFs.git```**
 
