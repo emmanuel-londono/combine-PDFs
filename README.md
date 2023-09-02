@@ -21,7 +21,9 @@ A Python applet that combines multiple PDF files into one PDF file.
 
 6. Run main.py file.
 
-7. Use the tkinter GUI to process your files. The last pdf file chosen will be located first in the combined product. Check for a merged.pdf file in the folder of the cloned repo.
+7. Use the tkinter GUI to process your files. You can select multiple pdfs by
+ ```CTRL + Clicking```
+The last pdf file chosen will be located first in the merged pdf. Check for a merged.pdf file in the folder of the cloned repo or app.
 
 
 
