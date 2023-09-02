@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog, ttk, messagebox
+from tkinter import filedialog, ttk, messagebox, font
 import os
 import PyPDF2
 
@@ -36,7 +36,7 @@ def successMessage(file: str):
 def failureMessage():
     return messagebox.showerror(
         "Combine PDFs: Failure Message",
-        "Something went wrong.",
+        "Something went wrong. Please try again.",
     )
 
 
@@ -95,25 +95,40 @@ window = tk.Tk()
 # Window Design
 window.iconbitmap("PDF_file_icon.ico")
 window.title("Combine PDF App")
-window.geometry("500x450")
+window.geometry("1250x750")
+
+# Create style object
+sto = ttk.Style()
+
+# configure style
+sto.configure("W.TButton", font=("Arial", 10, "underline"), foreground="Green")
 
 # Title
+title_font = tk.font.Font(family="Helvitica", size=20)
 title_label = ttk.Label(
-    master=window, text="Select the PDFs you'd like to combine.", font="Calibri 12 bold"
+    master=window, text="Select the PDFs you'd like to combine.", font=title_font
 )
 title_label.pack()
 
 # Image
-image = tk.PhotoImage(file="PDF_file_icon.png")
+image = tk.PhotoImage(file="combineAll.png")
 image_label = ttk.Label(master=window, image=image)
-image_label.pack()
+image_label.pack(pady=10)
 
 
 # Input Field
 input_frame = ttk.Frame(master=window)
-combine_button = ttk.Button(master=input_frame, text="Combine", command=combinePDFs)
-select_button = ttk.Button(
-    master=input_frame, text="Select Files and Combine", command=combinePDFs
+button_font = tk.font.Font(family="Helvitica", size=15)
+select_button = tk.Button(
+    master=input_frame,
+    text="Select Files and Combine",
+    bg="#0174ef",
+    fg="#ffffff",
+    bd=0,
+    font=button_font,
+    height=2,
+    width=25,
+    command=combinePDFs,
 )
 select_button.pack()
 input_frame.pack(pady=10)
