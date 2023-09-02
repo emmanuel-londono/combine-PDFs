@@ -39,15 +39,17 @@ def set_show_combine_button():
 
 
 def successMessage(file: str):
+    current_directory = os.getcwd()
     return messagebox.showinfo(
-        "Combine PDFs: Success Message", f"Check for the {file} file"
+        "Combine PDFs: Success Message",
+        f"Check for the {file} file in this application's folder: {current_directory}",
     )
 
 
 def failureMessage():
     return messagebox.showerror(
         "Combine PDFs: Failure Message",
-        "Something went wrong. Please try again.",
+        "Something went wrong. Please select more than one PDF.",
     )
 
 
