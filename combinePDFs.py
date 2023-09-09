@@ -74,32 +74,32 @@ def selectPDFs():
     else:
         output_label.config(text=f"Please select more than one PDF.")
 
-
-def combinePDFs():
-    pdf_filepaths = selectPDFs()
-    pdf_merger = PyPDF2.PdfMerger()
-    try:
-        for file_path in pdf_filepaths:
-            pdf_merger.append(file_path)
-
-        output_file = "merged.pdf"
-        with open(output_file, "wb") as output_pdf:
-            pdf_merger.write(output_pdf)
-
-        successMessage(output_file)
-        output_label.config(text=f"Merge Successful")
-
-    except Exception as e:
-        failureMessage()
-        print(f"Error: {e}")
-        output_label.config(text=f"Merge Failed")
-    finally:
-        pdf_merger.close()
-        select_button = ttk.Button(
-            master=input_frame, text="Select", command=selectPDFs
-        )
-        select_button.pack()
-        window.quit()
+if __name__ == "__main__":
+    def combinePDFs():
+        pdf_filepaths = selectPDFs()
+        pdf_merger = PyPDF2.PdfMerger()
+        try:
+            for file_path in pdf_filepaths:
+                pdf_merger.append(file_path)
+    
+            output_file = "merged.pdf"
+            with open(output_file, "wb") as output_pdf:
+                pdf_merger.write(output_pdf)
+    
+            successMessage(output_file)
+            output_label.config(text=f"Merge Successful")
+    
+        except Exception as e:
+            failureMessage()
+            print(f"Error: {e}")
+            output_label.config(text=f"Merge Failed")
+        finally:
+            pdf_merger.close()
+            select_button = ttk.Button(
+                master=input_frame, text="Select", command=selectPDFs
+            )
+            select_button.pack()
+            window.quit()
 
 
 # Window Creation
