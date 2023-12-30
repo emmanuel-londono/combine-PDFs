@@ -72,7 +72,7 @@ def selectPDFs():
         select_button.destroy()
         return pdf_filepaths
     else:
-        output_label.config(text=f"Please select more than one PDF.")
+        output_label.config(text=f"Please select more than one PDF. If you're combining encrypted PDFs, try print to microsoft pdf first.")
 
 if __name__ == "__main__":
     def combinePDFs():
